@@ -92,7 +92,7 @@ phases:
 
       #- docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
      
-      - eval $(aws ecr get-login | sed 's|https://||')
+      - eval $(aws ecr get-login  --region ap-south-1 | sed 's|https://||')
       - docker push 542023287726.dkr.ecr.ap-south-1.amazonaws.com/node-app
 
     #  - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
