@@ -58,7 +58,9 @@ phases:
       - echo Logging in to Amazon ECR...
       - REPOSITORY_URI=public.ecr.aws/c9r1n7y5/node-app
       - IMAGE_TAG=latest
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - aws ecr get-login-password  --region ap-south-1 | docker login --username AWS  --password-stdin 078726126237.dkr.ecr.ap-south-1.amazonaws.com
+
+      #- aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
