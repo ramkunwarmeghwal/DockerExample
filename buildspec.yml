@@ -74,7 +74,11 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
+      - AWS_ACCOUNT_ID=542023287726
+      - IMAGE_TAG=latest
+      - AWS_DEFAULT_REGION=ap-south-1
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
+
 
 
 # version: 0.2
